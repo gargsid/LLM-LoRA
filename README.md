@@ -2,7 +2,7 @@
 
 In this work, we investigated the effectiveness of FlanT5 model for summarizing dialogues. We used 3 strategies. We generated zero-shot summaries, summaries after fine-tuning the full model on a training dataset, and also fine-tuned the model using Parameter Efficient Fine Tuning method called LoRA (Low-Rank Approximation). 
 
-In summary, the zero-shot summaries are not accurate and fine-tuning is necessary. However, full-finetuning of LLMs like FlanT5 is computationally effective and therefore, we also compared how PEFT methods like LoRA perform against full finetuning. We show that by using LoRA we only train 1.4% of the total parameters but save tremendous compute and training time and still achieving similar performance as the full finetuned model. 
+In summary, the zero-shot summaries are not accurate and fine-tuning is necessary. However, full-finetuning of LLMs like FlanT5 is computationally effective and therefore, we also compared how PEFT methods like LoRA perform against full finetuning. We show that by using LoRA we only train 1.4% of the total parameters (total params: 250M) but save tremendous compute and training time and still achieving similar performance as the full finetuned model. 
 
 ## Setting up
 
