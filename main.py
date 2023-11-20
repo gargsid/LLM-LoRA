@@ -73,15 +73,6 @@ zeroshot_summary = tokenizer.decode(
     skip_special_tokens=True
 )
 
-# print(f'Input Prompt\n {prompt.format(dialogue)}')
-# print(dash_line)
-
-# print(f'GT-Summary: \n {human_summary}')
-# print(dash_line)
-
-# print(f'MODEL Summary: \n {zeroshot_summary}')
-# print(dash_line)
-
 # The maximum total input sequence length after tokenization. 
 # Sequences longer than this will be truncated, sequences shorter will be padded.
 tokenized_inputs = concatenate_datasets([dataset["train"], dataset["test"]]).map(lambda x: tokenizer(x["dialogue"], truncation=True), batched=True, remove_columns=["dialogue", "summary"])
@@ -203,7 +194,7 @@ dash_line = '-' * 25
 inputs = tokenizer(prompt.format(dialogue), return_tensors='pt')
 fine_tuned_summary = tokenizer.decode(
     model.generate(
-        inputs['input_ids'].to(device),
+        input_ids=inputs['input_ids'].to(device),
         max_new_tokens=200,
     )[0],
     skip_special_tokens=True
