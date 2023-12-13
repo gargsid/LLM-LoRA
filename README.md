@@ -38,6 +38,45 @@ python main.py --model_name=google/flan-t5-base --dataset_name=samsum
 
 For doing PEFT training using LoRA, use `--enable_lora` flag with the above command
 
+## Sample Results
+
+Let's look at couple of dialogues and compare summaries from different sources -- human generated, full-finetuned FlanT5, LoRA FlanT5. 
+
+**Dialogue-1**
+
+Millie: Heeey I’m sick I won’t come today
+Sal: I’m sorry! Get better soon :*
+Millie: <3
+
+**Human Summary**
+Millie is sick, so she won't come today.
+
+**Full-Finetuned Model Summary** 
+Millie is sick and won't come today.
+
+**LoRA Model Summary**
+Millie is sick and won't come today. 
+
+
+**Dialogue-2**
+
+David: Morning Russ. Have you seen the report I emailed yesterday?
+Russ: Hi David. Well received thank you. But I haven't read it yet.
+David: Is there anything you'd like me to do right now?
+Russ: I'll take a look at the report in a moment and will send you remarks if I have any.
+David: Sounds good. I guess I'll just answer some emails.
+Russ: Please do. I should be done by midday with the report.
+
+**Human Summary**
+Russ received David's report but hasn't read it yet.
+
+**Full-Finetuned Model Summary** 
+David has received the report he emailed yesterday. Russ will take a look at it and send David remarks. David will be done by midday with the report.
+
+**LoRA Model Summary**
+David has emailed Russ a report. Russ will read it and send David some comments.
+
+
 # Acknowledgements
 
 - Coursera's Introduction to Generative AI Course
