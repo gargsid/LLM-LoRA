@@ -45,29 +45,6 @@ Let's look at couple of dialogues and compare summaries from different sources -
 ### Dialogue-1
 
 ```
-Millie: Heeey I’m sick I won’t come today
-
-Sal: I’m sorry! Get better soon :*
-
-Millie: <3
-```
-
-**Human Summary:**
-```
-Millie is sick, so she won't come today.
-```
-**Full-Finetuned Model Summary:** 
-```
-Millie is sick and won't come today.
-```
-**LoRA Model Summary:**
-```
-Millie is sick and won't come today. 
-```
-
-### Dialogue-2
-
-```
 David: Morning Russ. Have you seen the report I emailed yesterday?
 
 Russ: Hi David. Well received thank you. But I haven't read it yet.
@@ -94,6 +71,31 @@ David has received the report he emailed yesterday. Russ will take a look at it 
 ```
 David has emailed Russ a report. Russ will read it and send David some comments.
 ```
+
+### Dialogue-2
+
+```
+Millie: Heeey I’m sick I won’t come today
+
+Sal: I’m sorry! Get better soon :*
+
+Millie: <3
+```
+
+**Human Summary:**
+```
+Millie is sick, so she won't come today.
+```
+**Full-Finetuned Model Summary:** 
+```
+Millie is sick and won't come today.
+```
+**LoRA Model Summary:**
+```
+Millie is sick and won't come today. 
+```
+
+
 
 We can see that finetuning only 1.4% parameters using LoRA is giving really good results which are closer to the results of the full-finetuned model. Using PEFT methods can save us a lot of time without compromising on the quality of the model. 
 
