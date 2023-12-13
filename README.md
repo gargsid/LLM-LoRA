@@ -95,6 +95,8 @@ David has received the report he emailed yesterday. Russ will take a look at it 
 David has emailed Russ a report. Russ will read it and send David some comments.
 ```
 
+We can see that finetuning only 1.4% parameters using LoRA is giving really good results which are closer to the results of the full-finetuned model. Using PEFT methods can save us a lot of time without compromising on the quality of the model. 
+
 # Acknowledgements
 
 - Coursera's Introduction to Generative AI Course
