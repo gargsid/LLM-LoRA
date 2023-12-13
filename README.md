@@ -95,9 +95,17 @@ Millie is sick and won't come today.
 Millie is sick and won't come today. 
 ```
 
-
-
 We can see that finetuning only 1.4% parameters using LoRA is giving really good results which are closer to the results of the full-finetuned model. Using PEFT methods can save us a lot of time without compromising on the quality of the model. 
+
+## ROUGE Scores
+
+| Metric  | Full-Finetuning  | LoRa  |
+|---|---|---|
+| ROUGE-1  | 0.478  | 0.474  |
+| ROUGE-2  | 0.231  | 0.227  |
+| ROUGE-L  | 0.395  | 0.392  |
+
+
 
 # Acknowledgements
 
