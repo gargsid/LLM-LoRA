@@ -99,6 +99,8 @@ We can see that finetuning only 1.4% parameters using LoRA is giving really good
 
 ## ROUGE Scores
 
+We can also see that the ROUGE-scores are also very close for both the methods.
+
 | Metric  | Full-Finetuning  | LoRa  |
 |---|---|---|
 | ROUGE-1  | 0.478  | 0.474  |
